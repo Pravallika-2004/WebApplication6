@@ -49,6 +49,9 @@ namespace WebApplication6.Controllers
 
             return View(model); // Return view again if validation fails
         }
-
+        public ActionResult pravalli()
+        {
+            return View(); // Shows a blank form to the user
+        }
     }
 }
