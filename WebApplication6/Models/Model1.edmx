@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MBAStudentPDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="mba_student_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+          <Property Name="date_of_birth" Type="date" />
+          <Property Name="enrollment_no" Type="varchar" MaxLength="50" />
+          <Property Name="mobile_no" Type="varchar" MaxLength="15" />
+          <Property Name="email_id" Type="varchar" MaxLength="100" />
+          <Property Name="blood_group" Type="varchar" MaxLength="5" />
+          <Property Name="nationality" Type="varchar" MaxLength="50" />
+          <Property Name="religion" Type="varchar" MaxLength="50" />
+          <Property Name="father_name" Type="varchar" MaxLength="100" />
+          <Property Name="father_mobile_no" Type="varchar" MaxLength="15" />
+          <Property Name="father_email_id" Type="varchar" MaxLength="100" />
+          <Property Name="mother_name" Type="varchar" MaxLength="100" />
+          <Property Name="mother_mobile_no" Type="varchar" MaxLength="15" />
+          <Property Name="mother_email_id" Type="varchar" MaxLength="100" />
+          <Property Name="address_for_communication" Type="text" />
+          <Property Name="local_guardian_name" Type="varchar" MaxLength="100" />
+          <Property Name="local_guardian_mobile" Type="varchar" MaxLength="15" />
+          <Property Name="local_guardian_email_id" Type="varchar" MaxLength="100" />
+          <Property Name="local_guardian_address" Type="text" />
+          <Property Name="parents_income_category" Type="varchar" MaxLength="20" />
+          <Property Name="work_experience" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="MBAStudentPDModelStoreContainer">
+          <EntitySet Name="mba_student_data" EntityType="Self.mba_student_data" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MBAStudentPDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="mba_student_data">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="date_of_birth" Type="DateTime" Precision="0" />
+          <Property Name="enrollment_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mobile_no" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="email_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="blood_group" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="religion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="father_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="father_mobile_no" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="father_email_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="mother_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="mother_mobile_no" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="mother_email_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="address_for_communication" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="local_guardian_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="local_guardian_mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="local_guardian_email_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="local_guardian_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="parents_income_category" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="work_experience" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="MBAStudentPDEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="mba_student_data" EntityType="Self.mba_student_data" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MBAStudentPDModelStoreContainer" CdmEntityContainer="MBAStudentPDEntities">
+          <EntitySetMapping Name="mba_student_data">
+            <EntityTypeMapping TypeName="MBAStudentPDModel.mba_student_data">
+              <MappingFragment StoreEntitySet="mba_student_data">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+                <ScalarProperty Name="enrollment_no" ColumnName="enrollment_no" />
+                <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+                <ScalarProperty Name="email_id" ColumnName="email_id" />
+                <ScalarProperty Name="blood_group" ColumnName="blood_group" />
+                <ScalarProperty Name="nationality" ColumnName="nationality" />
+                <ScalarProperty Name="religion" ColumnName="religion" />
+                <ScalarProperty Name="father_name" ColumnName="father_name" />
+                <ScalarProperty Name="father_mobile_no" ColumnName="father_mobile_no" />
+                <ScalarProperty Name="father_email_id" ColumnName="father_email_id" />
+                <ScalarProperty Name="mother_name" ColumnName="mother_name" />
+                <ScalarProperty Name="mother_mobile_no" ColumnName="mother_mobile_no" />
+                <ScalarProperty Name="mother_email_id" ColumnName="mother_email_id" />
+                <ScalarProperty Name="address_for_communication" ColumnName="address_for_communication" />
+                <ScalarProperty Name="local_guardian_name" ColumnName="local_guardian_name" />
+                <ScalarProperty Name="local_guardian_mobile" ColumnName="local_guardian_mobile" />
+                <ScalarProperty Name="local_guardian_email_id" ColumnName="local_guardian_email_id" />
+                <ScalarProperty Name="local_guardian_address" ColumnName="local_guardian_address" />
+                <ScalarProperty Name="parents_income_category" ColumnName="parents_income_category" />
+                <ScalarProperty Name="work_experience" ColumnName="work_experience" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
