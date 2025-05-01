@@ -67,7 +67,7 @@
           <Property Name="parents_income_category" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="work_experience" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="MBAStudentPDEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MBAStudentPDEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="mba_student_data" EntityType="Self.mba_student_data" />
         </EntityContainer>
       </Schema>
@@ -75,7 +75,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MBAStudentPDModelStoreContainer" CdmEntityContainer="MBAStudentPDEntities">
+        <EntityContainerMapping StorageEntityContainer="MBAStudentPDModelStoreContainer" CdmEntityContainer="MBAStudentPDEntities1">
           <EntitySetMapping Name="mba_student_data">
             <EntityTypeMapping TypeName="MBAStudentPDModel.mba_student_data">
               <MappingFragment StoreEntitySet="mba_student_data">

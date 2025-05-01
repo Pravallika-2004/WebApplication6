@@ -10,7 +10,7 @@ namespace WebApplication6.Controllers
     public class MbaStudentController : Controller
     {
         // Use your actual DbContext here
-        MBAStudentPDEntities db = new MBAStudentPDEntities();
+        MBAStudentPDEntities1 db = new MBAStudentPDEntities1();
 
         // GET: MbaStudent
         public ActionResult StudentDetails()

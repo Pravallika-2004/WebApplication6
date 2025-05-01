@@ -13,10 +13,10 @@ namespace WebApplication6.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MBAStudentPDEntities : DbContext
+    public partial class MBAStudentPDEntities1 : DbContext
     {
-        public MBAStudentPDEntities()
-            : base("name=MBAStudentPDEntities")
+        public MBAStudentPDEntities1()
+            : base("name=MBAStudentPDEntities1")
         {
         }
     
